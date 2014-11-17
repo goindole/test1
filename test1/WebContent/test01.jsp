@@ -4,9 +4,7 @@
 <head>
 </head>
 <body>
-${msg } - ${name}
+${msg } - <b>${name}</b>
 
-<%= %> JSP
-${ } EL(Expression Language)
 </body>
 </html>
