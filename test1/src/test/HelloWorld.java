@@ -31,7 +31,7 @@ public class HelloWorld extends HttpServlet {
 		
 		request.setAttribute("msg", "Hello "+ request.getParameter("name"));		
 		request.setAttribute("name", "John");
-		"Test".equals(testMessge)
+		
 		String nextJSP = "/test01.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(request,response);
