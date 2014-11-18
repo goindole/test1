@@ -26,8 +26,8 @@ public class OmahaPoker {
 
 
 		logger.debug("Board: {}", board.toString());
-		logger.debug("HandA: {} => {}", handA.toString(), handA.mergeCard(board));
-		logger.debug("HandB: {} => {}", handB.toString(), handB.mergeCard(board));
+		logger.debug("HandA: {} => {}", handA.toString(), game.getRank(handA, board));
+		logger.debug("HandB: {} => {}", handB.toString(), game.getRank(handB, board));
 	}
 
 	

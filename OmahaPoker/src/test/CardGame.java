@@ -1,10 +1,15 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import test.model.AbstractHolder;
+import test.model.AbstractRank;
+import test.model.Board;
 import test.model.Card;
+import test.model.Hand;
 
 public class CardGame {
 	private Map<String, String> cardNameMap = null;
@@ -31,8 +36,12 @@ public class CardGame {
 		}
 	}
 	
-	public void getRank() {
-		
+	public AbstractRank getRank(Hand hand, Board board) {
+			List<Card>	mergedCards = new ArrayList<Card>();
+			mergedCards.addAll(hand.getCards());
+			mergedCards.addAll(board.getCards());
+			
+			return null;
 	}
 
 }

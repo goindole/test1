@@ -24,12 +24,5 @@ public class AbstractHolder {
 		return this.cards;
 	}
 
-	public List<Card> mergeCard(Board board) {
-		List<Card>	mergedCards = new ArrayList<Card>();
-		
-		mergedCards.addAll(this.cards);
-		mergedCards.addAll(board.getCards());
-		
-		return mergedCards;
-	}
+
 }
