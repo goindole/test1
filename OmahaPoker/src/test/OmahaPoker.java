@@ -14,8 +14,12 @@ public class OmahaPoker {
 		
 		CardGame game = new CardGame();
 		String cardString1 = "Ac-Kd-Jd-3d";
-		String cardString2 = "5c-5d-6c-7d";
-		String cardString3 = "Ah-Kh-5s-2s-Qd";
+		String cardString2 = "5c-5d-6c-6d";
+		String cardString3 = "Ad-Kh-5s-2d-Qd";
+		
+
+//HandA:Ac-Kd-Jd-3d HandB:5c-5d-6c-6d Board:Ad-Kh-5s-2d-Qd
+
 		Hand handA = new Hand();
 		Hand handB = new Hand();
 		Board board = new Board();
@@ -25,9 +29,11 @@ public class OmahaPoker {
 		
 
 
-		logger.debug("Board: {}", board.toString());
-		logger.debug("HandA: {} => {}", handA.toString(), game.getRank(handA, board));
-		logger.debug("HandB: {} => {}", handB.toString(), game.getRank(handB, board));
+		logger.debug("HandA: {} => Board {}", handA.toString(), board.toString());
+		logger.debug("=>CardRank  {}",  game.getHighestCardRank(handA, board));
+		
+//		logger.debug("HandB: {} => Board {}", handB.toString(), board.toString());
+//		logger.debug("=> {}",  game.getCardRanks(handB, board));
 	}
 
 	
