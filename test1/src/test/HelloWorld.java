@@ -72,5 +72,36 @@ public class HelloWorld extends HttpServlet {
 		}
 
 		return custMsg;
+=======
+	private String message;
+
+	public void init() throws ServletException {
+		// Do required initialization
+		message = "Hello World";
+	}
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// Set response content type
+		response.setContentType("text/html");
+
+//		// Actual logic goes here.
+//		PrintWriter out = response.getWriter();
+//		out.println("<h1>" + message + "</h1>");
+//		
+//		
+		
+		
+		request.setAttribute("msg", "Hello "+ request.getParameter("name"));		
+		request.setAttribute("name", "John");
+		
+		String nextJSP = "/test01.jsp";
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+		dispatcher.forward(request,response);
+	}
+
+	public void destroy() {
+		// do nothing.
+>>>>>>> branch 'master' of https://github.com/goindole/test1/
 	}
 }
