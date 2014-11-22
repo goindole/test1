@@ -8,7 +8,8 @@ ${msgNew}<br/>
 ${mainMessage}<br/>
 ${msg } - ${name}<br/>
 
-${custMsg}
+${custMsg}<br/>
+${display}
 
 </body>
 </html>
